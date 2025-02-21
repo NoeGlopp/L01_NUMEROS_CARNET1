@@ -1,14 +1,12 @@
-﻿using Microsoft.;
-using L01_NUMEROS_CARNET.Models; // Ajusta el namespace según la ubicación de tus modelos
+﻿using Microsoft.EntityFrameworkCore;
+using L01_NUMEROS_CARNET.Models; // Ajusta el namespace si tus modelos están en otro lugar
 
 namespace L01_NUMEROS_CARNET.Data
 {
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-        }
+            : base(options) { }
 
         // DbSet para cada tabla de la base de datos
         public DbSet<Rol> Roles { get; set; }

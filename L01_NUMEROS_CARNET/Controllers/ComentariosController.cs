@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using L01_NUMEROS_CARNET.Data;
+using L01_NUMEROS_CARNET.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 [Route("api/[controller]")]
