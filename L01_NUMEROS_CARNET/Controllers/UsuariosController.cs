@@ -1,4 +1,5 @@
 ﻿using L01_NUMEROS_CARNET.Data;
+using L01_NUMEROS_CARNET.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
