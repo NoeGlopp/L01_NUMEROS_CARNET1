@@ -1,9 +1,9 @@
 using L01_NUMEROS_CARNET.Data;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFramework;
 
 
 
-var builder = WebApplication.CreateBuilder(args); aa
+var builder = WebApplication.CreateBuilder(args); aaaa
 
 // Agregar servicios al contenedor.
 builder.Services.AddControllers();
