@@ -1,10 +1,23 @@
-﻿namespace L01_NUMEROS_CARNET.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace L01_NUMEROS_CARNET.Models
 {
+    [Table("calificaciones")]
     public class Calificacion
     {
+        [Key]
+        [Column("calificacionId")]
         public int CalificacionId { get; set; }
+
+        [Column("publicacionId")]
         public int PublicacionId { get; set; }
+
+        [Column("usuarioId")]
         public int UsuarioId { get; set; }
-        public int Valor { get; set; } // Mapea al campo "calificacion"
+
+    
+        [Column("calificacion")]
+        public int Valor { get; set; }
     }
 }

@@ -15,7 +15,6 @@ public class UsuariosController : ControllerBase
         _context = context;
     }
 
-    // GET: api/Usuarios
     [HttpGet]
     public IActionResult GetUsuarios()
     {
@@ -23,7 +22,6 @@ public class UsuariosController : ControllerBase
         return Ok(usuarios);
     }
 
-    // GET: api/Usuarios/BuscarPorNombreApellido/{nombre}
     [HttpGet("BuscarPorNombreApellido/{nombre}")]
     public IActionResult BuscarPorNombreApellido(string nombre)
     {
@@ -33,7 +31,7 @@ public class UsuariosController : ControllerBase
         return Ok(usuarios);
     }
 
-    // GET: api/Usuarios/BuscarPorRol/{rolId}
+  
     [HttpGet("BuscarPorRol/{rolId}")]
     public IActionResult BuscarPorRol(int rolId)
     {
@@ -41,7 +39,7 @@ public class UsuariosController : ControllerBase
         return Ok(usuarios);
     }
 
-    // POST: api/Usuarios
+
     [HttpPost]
     public IActionResult CrearUsuario([FromBody] Usuario usuario)
     {
@@ -50,7 +48,6 @@ public class UsuariosController : ControllerBase
         return Ok(usuario);
     }
 
-    // PUT: api/Usuarios/{id}
     [HttpPut("{id}")]
     public IActionResult EditarUsuario(int id, [FromBody] Usuario usuario)
     {
@@ -68,7 +65,7 @@ public class UsuariosController : ControllerBase
         return Ok(usuarioExistente);
     }
 
-    // DELETE: api/Usuarios/{id}
+
     [HttpDelete("{id}")]
     public IActionResult EliminarUsuario(int id)
     {

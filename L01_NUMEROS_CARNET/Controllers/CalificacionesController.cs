@@ -14,7 +14,6 @@ public class CalificacionesController : ControllerBase
         _context = context;
     }
 
-    // GET: api/Calificaciones
     [HttpGet]
     public IActionResult GetCalificaciones()
     {
@@ -22,7 +21,7 @@ public class CalificacionesController : ControllerBase
         return Ok(calificaciones);
     }
 
-    // GET: api/Calificaciones/PorPublicacion/{publicacionId}
+
     [HttpGet("PorPublicacion/{publicacionId}")]
     public IActionResult GetCalificacionesPorPublicacion(int publicacionId)
     {
@@ -32,7 +31,6 @@ public class CalificacionesController : ControllerBase
         return Ok(calificaciones);
     }
 
-    // POST: api/Calificaciones
     [HttpPost]
     public IActionResult CrearCalificacion([FromBody] Calificacion calificacion)
     {
@@ -41,7 +39,7 @@ public class CalificacionesController : ControllerBase
         return Ok(calificacion);
     }
 
-    // PUT: api/Calificaciones/{id}
+
     [HttpPut("{id}")]
     public IActionResult EditarCalificacion(int id, [FromBody] Calificacion calificacion)
     {
@@ -57,7 +55,7 @@ public class CalificacionesController : ControllerBase
         return Ok(calificacionExistente);
     }
 
-    // DELETE: api/Calificaciones/{id}
+
     [HttpDelete("{id}")]
     public IActionResult EliminarCalificacion(int id)
     {

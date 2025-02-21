@@ -14,7 +14,6 @@ public class ComentariosController : ControllerBase
         _context = context;
     }
 
-    // GET: api/Comentarios
     [HttpGet]
     public IActionResult GetComentarios()
     {
@@ -22,7 +21,6 @@ public class ComentariosController : ControllerBase
         return Ok(comentarios);
     }
 
-    // GET: api/Comentarios/PorUsuario/{usuarioId}
     [HttpGet("PorUsuario/{usuarioId}")]
     public IActionResult GetComentariosPorUsuario(int usuarioId)
     {
@@ -32,7 +30,7 @@ public class ComentariosController : ControllerBase
         return Ok(comentarios);
     }
 
-    // POST: api/Comentarios
+
     [HttpPost]
     public IActionResult CrearComentario([FromBody] Comentario comentario)
     {
@@ -41,7 +39,7 @@ public class ComentariosController : ControllerBase
         return Ok(comentario);
     }
 
-    // PUT: api/Comentarios/{id}
+
     [HttpPut("{id}")]
     public IActionResult EditarComentario(int id, [FromBody] Comentario comentario)
     {
@@ -57,7 +55,7 @@ public class ComentariosController : ControllerBase
         return Ok(comentarioExistente);
     }
 
-    // DELETE: api/Comentarios/{id}
+
     [HttpDelete("{id}")]
     public IActionResult EliminarComentario(int id)
     {

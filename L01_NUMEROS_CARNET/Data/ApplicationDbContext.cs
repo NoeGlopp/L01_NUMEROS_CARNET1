@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using L01_NUMEROS_CARNET.Models; // Ajusta el namespace si tus modelos están en otro lugar
+using L01_NUMEROS_CARNET.Models; 
 
 namespace L01_NUMEROS_CARNET.Data
 {
@@ -8,7 +8,7 @@ namespace L01_NUMEROS_CARNET.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
 
-        // DbSet para cada tabla de la base de datos
+        
         public DbSet<Rol> Roles { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Publicacion> Publicaciones { get; set; }

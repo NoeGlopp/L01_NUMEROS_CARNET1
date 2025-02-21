@@ -1,14 +1,14 @@
-using L01_NUMEROS_CARNET.Data;      // Asegúrate de que este namespace coincida con el tuyo
+using L01_NUMEROS_CARNET.Data;    
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar servicios al contenedor.
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configurar DbContext (asegúrate de tener la cadena de conexión "DefaultConnection" en appsettings.json)
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")
@@ -17,7 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 var app = builder.Build();
 
-// Configurar el pipeline HTTP.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
